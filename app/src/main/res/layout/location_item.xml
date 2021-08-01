@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/purple_200"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <LinearLayout
+        android:id="@+id/locLyt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/tempIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/locLyt"
+        android:src="@drawable/temperature"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tempIcon"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@id/tempIcon"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+
+    <ImageView
+        android:id="@+id/windIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/tempIcon"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/wind" />
+
+    <TextView
+        android:id="@+id/windSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/temp"
+        android:layout_alignTop="@id/windIcon"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@id/windIcon"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/windDeg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/windSpeed"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/windSpeed"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/humidityIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/windIcon"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/humidity"
+        android:contentDescription="humidityIcon" />
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/temp"
+        android:layout_alignTop="@id/humidityIcon"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@id/humidityIcon"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/humidity"
+        android:layout_alignTop="@id/humidity"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+
+    <!-- End Humidity Data -->
+
+
+</RelativeLayout>
